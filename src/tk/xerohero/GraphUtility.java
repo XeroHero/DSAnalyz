@@ -27,7 +27,7 @@ public class GraphUtility {
 
     private static JFreeChart createChart(PieDataset dataset) {
         return ChartFactory.createPieChart(
-                "Disk Space Status", // chart title
+                "Main Disk Space Status", // chart title
                 dataset, // data
                 true, // include legend
                 true,
