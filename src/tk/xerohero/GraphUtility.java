@@ -36,7 +36,7 @@ public class GraphUtility {
                 switch (entity.toString()){
                     case "PieSection: 0, 1(Free)":
                         System.out.println("Clicked on FRee");
-//                        detailsPaneUsed(); //TODO figure out if this is causing the crash??
+                        detailsPaneUsed();
                         new DetailsWindow();
                         break;
                     case "PieSection: 0, 0(Used)":
