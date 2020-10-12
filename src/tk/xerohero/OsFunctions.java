@@ -7,6 +7,14 @@ import java.text.ParseException;
 import static tk.xerohero.Calculations.roundTwoDp;
 import static tk.xerohero.Main.*;
 
+/**
+ * This class contains calls to the OS layer functions to obtain all
+ * the information relative to the underlying operating systems, as
+ * different OSs have different addressing strategies and partition
+ * tables. This can cause issues when we are obtaining the references
+ * to the root partitions of the drives, and therefore there are many
+ * check to be performed here.
+ */
 public class OsFunctions {
 
     public static String getOsType() {
@@ -24,16 +32,16 @@ public class OsFunctions {
     }
 
     static void determineOsCalculation() {
-        if (getOsType().equalsIgnoreCase("Linux")) {
-//            String uxDir = System.getenv();
-            freeBytes = new File("/").getFreeSpace();
-            totalBytes = new File("/").getTotalSpace();
-        } else if (getOsType().equalsIgnoreCase("Windows")) {
-            String windowsDir = System.getenv("windir");
-            freeBytes = new File(windowsDir).getFreeSpace();
-            totalBytes = new File(windowsDir).getTotalSpace();
+        switch (getOsType()) {
+            case "Linux" -> {
+                freeBytes = new File("/").getFreeSpace();
+                totalBytes = new File("/").getTotalSpace();
+            }
+            case "Windows" -> {
+                String windowsDir = System.getenv("windir");
+                freeBytes = new File(windowsDir).getFreeSpace();
+                totalBytes = new File(windowsDir).getTotalSpace();
+            }
         }
     }
-
-
 }

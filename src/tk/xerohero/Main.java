@@ -14,9 +14,9 @@ public class Main {
 
     static double freeBytes = toGB(new File("/").getFreeSpace());
     static double totalBytes = toGB(new File("/").getTotalSpace());
-
+    static JFrame frame;
     public static void main(String[] args) throws ParseException {
-        JFrame frame = new JFrame("Space Analyser");
+        frame = new JFrame("Space Analyser");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         determineOsCalculation();
