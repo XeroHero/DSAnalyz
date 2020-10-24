@@ -6,7 +6,7 @@ import java.text.ParseException;
 
 public class Calculations {
 
-    static double roundTwoDp(double val) throws ParseException {
+    static double roundOneDp(double val) throws ParseException {
         DecimalFormatSymbols symbols = DecimalFormatSymbols.getInstance();
         symbols.setDecimalSeparator('.');
         DecimalFormat format = new DecimalFormat("#.##", symbols);
@@ -16,6 +16,5 @@ public class Calculations {
     static double toGB(double bytes) {
         return bytes / (1024 * 1024 * 1024);
     }
-
 
 }

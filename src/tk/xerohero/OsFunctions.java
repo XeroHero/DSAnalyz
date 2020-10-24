@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.io.File;
 import java.text.ParseException;
 
-import static tk.xerohero.Calculations.roundTwoDp;
+import static tk.xerohero.Calculations.roundOneDp;
 import static tk.xerohero.Main.*;
 
 /**
@@ -22,9 +22,9 @@ public class OsFunctions {
     }
 
     static void getSpaceReadings(double freeBytes, double totalBytes, double usedBytes) throws ParseException {
-        total = new JTextField("Total: \t" + roundTwoDp(totalBytes) + "GB");
-        free = new JTextField("Free: \t" + roundTwoDp(freeBytes) + "GB");
-        used = new JTextField("Used: \t" + roundTwoDp(usedBytes) + "GB");
+        total = new JTextField("Total: \t" + roundOneDp(totalBytes) + "GB");
+        free = new JTextField("Free: \t" + roundOneDp(freeBytes) + "GB");
+        used = new JTextField("Used: \t" + roundOneDp(usedBytes) + "GB");
 
         total.setEditable(false);
         free.setEditable(false);
