@@ -1,12 +1,14 @@
 package tk.xerohero;
 
+import org.junit.jupiter.api.Test;
+
 import java.text.ParseException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculationsTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void roundOneDp() throws ParseException {
         double bytes = 856329847;
         double testVal = Calculations.roundOneDp(bytes);
