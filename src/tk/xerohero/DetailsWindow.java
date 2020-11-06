@@ -35,14 +35,11 @@ public class DetailsWindow {
         frameClass.setDefaultCloseOperation(EXIT_ON_CLOSE);
         JButton jButton = new JButton();
         jButton.setText("Close");
-        jButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frameClass.dispose();
-                Main.frame.setVisible(true);
+        jButton.addActionListener(e -> {
+            frameClass.dispose();
+            Main.frame.setVisible(true);
 //                frameClass.getDefaultCloseOperation();
-                System.out.println("Disposed!");
-            }
+            System.out.println("Disposed!");
         });
 //        detailsPaneUsed();
         jButton.setVisible(true);

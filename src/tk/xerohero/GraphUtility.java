@@ -33,16 +33,14 @@ public class GraphUtility {
                 // CASE 1: "PieSection: 0, 1(Free)" ==> FREE
                 // CASE 2: "PieSection: 0, 0(Used)" ==> USED
 
-                switch (entity.toString()){
-                    case "PieSection: 0, 1(Free)":
+                //                        new DetailsWindow();
+                switch (entity.toString()) {
+                    case "PieSection: 0, 1(Free)" -> {
                         System.out.println("Clicked on FRee");
                         detailsPaneUsed();
                         new DetailsWindow();
-                        break;
-                    case "PieSection: 0, 0(Used)":
-//                        new DetailsWindow();
-                        System.out.println("Clicked on Used");
-                        break;
+                    }
+                    case "PieSection: 0, 0(Used)" -> System.out.println("Clicked on Used");
                 }
             }
 

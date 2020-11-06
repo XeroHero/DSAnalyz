@@ -11,17 +11,10 @@ import javax.swing.*;
 import java.io.File;
 import java.text.ParseException;
 
-import static javafx.application.Application.launch;
 import static tk.xerohero.Calculations.toGB;
 import static tk.xerohero.GUI.layoutFrame;
 import static tk.xerohero.OsFunctions.determineOsCalculation;
 import static tk.xerohero.OsFunctions.getSpaceReadings;
-import javafx.application.Application;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Line;
-import javafx.stage.Stage;
 
 
 
@@ -29,7 +22,7 @@ public class Main extends Application{
 
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
 
         //Draw a line
 
@@ -49,7 +42,7 @@ public class Main extends Application{
         Stage secondStage = new Stage();
         secondStage.setTitle("Second stage");
 
-        primaryStage.show();
+//        primaryStage.show();
         secondStage.show(); //Can apply this to my DSAnalyz Project
     }
 
