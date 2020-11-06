@@ -11,7 +11,7 @@ class CalculationsTest {
     @Test
     void roundOneDp() throws ParseException {
         double bytes = 856329847;
-        double testVal = Calculations.roundOneDp(bytes);
+        double testVal = Calculations.roundOneDp(bytes).doubleValue();
         assertEquals(testVal, 0.8);
     }
 

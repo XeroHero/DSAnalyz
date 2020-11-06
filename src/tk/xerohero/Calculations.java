@@ -6,11 +6,11 @@ import java.text.ParseException;
 
 public class Calculations {
 
-    static double roundOneDp(double val) throws ParseException {
+    static Number roundOneDp(double val) throws ParseException {
         DecimalFormatSymbols symbols = DecimalFormatSymbols.getInstance();
         symbols.setDecimalSeparator('.');
         DecimalFormat format = new DecimalFormat("#.##", symbols);
-        return (double) format.parse(format.format(toGB(val)));
+        return format.parse(format.format(toGB(val)));
     }
 
     static double toGB(double bytes) {

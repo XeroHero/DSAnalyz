@@ -22,9 +22,9 @@ public class OsFunctions {
     }
 
     static void getSpaceReadings(double freeBytes, double totalBytes, double usedBytes) throws ParseException {
-        total = new JTextField("Total: \t" + roundOneDp(totalBytes) + "GB");
-        free = new JTextField("Free: \t" + roundOneDp(freeBytes) + "GB");
-        used = new JTextField("Used: \t" + roundOneDp(usedBytes) + "GB");
+        total = new JTextField("Total: \t" + roundOneDp(totalBytes).toString() + "GB");
+        free = new JTextField("Free: \t" + roundOneDp(freeBytes).toString() + "GB");
+        used = new JTextField("Used: \t" + roundOneDp(usedBytes).toString() + "GB");
 
         total.setEditable(false);
         free.setEditable(false);
