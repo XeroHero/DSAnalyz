@@ -77,5 +77,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="experimental" level="project" />
+    <orderEntry type="library" name="javafx-sdk-15.0" level="project" />
   </component>
 </module>
